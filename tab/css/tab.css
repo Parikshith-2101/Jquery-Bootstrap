@@ -1,0 +1,42 @@
+
+
+body{
+    display : grid;
+    place-items : center;
+}
+.tab>a{
+    text-decoration : none;
+    display : inline-block;
+    padding : 12px 10px;
+    border-right : 1px solid;
+    color: black;
+}
+.tab>a>i{
+    transform : rotate(-180deg);
+    transition : 0.2s linear;
+}
+.tabDiv{
+    display : flex;
+    border : 1px solid;
+}
+.active{
+    background : wheat;
+}
+.active>a>i{
+    transform : unset;
+}
+.container{
+    border : 1px solid;
+    padding : 5px 5px 20px;
+    width : 60%;
+    height : 300px;
+}
+.content{
+    height : 0;
+    overflow : hidden;
+    opacity : 1;
+    transition : opacity 1s;
+}
+.show-content{
+    height : auto;
+}

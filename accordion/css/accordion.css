@@ -1,0 +1,47 @@
+a{
+    text-decoration : none;
+    font-size : 24px;
+    border : 1px solid black;
+    padding : 10px 15px;
+    display : flex;
+    justify-content : space-between;
+    width:100%;
+    background : #ddd;
+    color : black;
+    font-weight : 500;
+
+    transition:all 0.3s linear;
+ 
+}
+a>i{
+    transform : rotate(-180deg);
+
+    transition:all 0.3s linear;
+}
+.container{
+    display:grid;
+    place-items : center;
+}
+.content{
+    transition:height 0.8s;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+.accordion{
+    width:60%;
+}
+.h2{
+    font-size : 30px;
+}
+.active>a{
+    background : wheat;
+}
+.active>a>i
+{
+    transform:unset;
+}
+.active>.content{
+    opacity: 1;
+    height: 100px;
+}
