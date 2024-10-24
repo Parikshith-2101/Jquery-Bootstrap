@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<title>Tab</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel = "stylesheet" href = "css/tab.css">
+
+    </head>
+    <body>
+
+	<h2 class="h2">Tab Using jQuery</h2>
+	<div class="container">
+            <div class="tabDiv">
+	    <div class = "tab tab1 active">
+		<a href = "#content1">
+		    Content-heading
+		    <i class="fa-solid fa-chevron-down"></i>
+		</a>
+	 	
+	    </div>
+	
+	     <div class = "tab tab2">
+		<a href = "#content2">
+		    Content-heading
+		    <i class="fa-solid fa-chevron-down"></i>
+		</a>
+	 	
+	    </div>
+		
+	     <div class = "tab tab3">
+		<a href = "#content3">
+		    Content-heading
+		    <i class="fa-solid fa-chevron-down"></i>
+		</a>
+
+	    </div>
+	    </div>
+	    <div class="content content1 show-content">
+		    <p>Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point. It might describe a place, character, or process; narrate a series of events; compare or contrast two or more things; classify items into categories; or describe causes and effects. Regardless of the kind of information they contain, all paragraphs share certain characteristics. One of the most important of these is a topic sentence.</p>
+	    </div>
+	    <div class="content content2">
+		    <p>A well-organized paragraph supports or develops a single controlling idea, which is expressed in a sentence called the topic sentence. A topic sentence has several important functions: it substantiates or supports an essay’s thesis statement; it unifies the content of a paragraph and directs the order of the sentences; and it advises the reader of the subject to be discussed and how the paragraph will discuss it. Readers generally look to the first few sentences in a paragraph to determine the subject and perspective of the paragraph. That’s why it’s often best to put the topic sentence at the very beginning of the paragraph. In some cases, however, it’s more effective to place another sentence before the topic sentence—for example, a sentence linking the current paragraph to the previous one, or one providing background information.</p>
+	    </div>
+	    <div class="content content3">
+		    <p>Despite the fact that piranhas are relatively harmless, many people continue to believe the pervasive myth that piranhas are dangerous to humans. This impression of piranhas is exacerbated by their mischaracterization in popular media. For example, the promotional poster for the 1978 horror film Piranha features an oversized piranha poised to bite the leg of an unsuspecting woman. Such a terrifying representation easily captures the imagination and promotes unnecessary fear. While the trope of the man-eating piranhas lends excitement to the adventure stories, it bears little resemblance to the real-life piranha. By paying more attention to fact than fiction, humans may finally be able to let go of this inaccurate belief.</p>
+	    </div>	
+	</div>	
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+	    $(document).ready(function(){
+
+		$(".tab").click(function(){
+		    if($(this).hasClass("active")){
+			$(this).removeClass("active");
+		    }
+		    else{
+			$(".tab").removeClass("active");
+			$(this).addClass("active");
+		    }
+		});
+		$(".tab1").click(function(){
+		    if($(".content1").hasClass("show-content")){
+			$(".content1").removeClass("show-content");
+		    }
+		    else{
+			$(".content").removeClass("show-content");
+			$(".content1").addClass("show-content");
+		    }
+		});
+		$(".tab2").click(function(){
+		    if($(".content2").hasClass("show-content")){
+			$(".content2").removeClass("show-content");
+		    }
+		    else{
+			$(".content").removeClass("show-content");
+			$(".content2").addClass("show-content");
+		    }
+		});
+		$(".tab3").click(function(){
+		    if($(".content3").hasClass("show-content")){
+			$(".content3").removeClass("show-content");
+		    }
+		    else{
+			$(".content").removeClass("show-content");
+			$(".content3").addClass("show-content");
+		    }
+		});
+
+	    });
+     	</script>
+    </body>
+</html>
